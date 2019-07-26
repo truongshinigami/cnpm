@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+        
+<link rel="stylesheet" type="text/css" href="Styles/thongtin.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+</head>
+<body>
+    <div class="topnav">
+    
+        <a href="stHome.php">Trang chủ</a>
+        <a href="thongtincanhan.html" class="active">Thông tin</a>
+        <a href="doexam.php" >Làm bài </a>
+        <a href="#">Bảng xếp hạng</a>
+        <button >Đăng xuất</button>
+        <p>Xin chào : Người Chơi 1</p>
+    </div>
+    <div class = "content" id="thongtin">
+        <!--Form php kết nói database-->
+    <p style="font-size: 20px">Thông tin cá nhân :</p>
+    <form action="">
+        <div class="row">
+         <div class="col-15">
+            <label for="name">Họ và Tên</label>
+        </div>
+         <div class="col-70">
+            
+            <input type="text" name="name" id="name" value="Nguyễn Văn A" disabled>
+         </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                    <label for="dateofbirth">Ngày sinh</label>         
+            </div>
+            <div class="col-70">
+                   
+                    <input type="date" name="dateofbirth" id="dateofbirth" value="01/12/2001" disabled>
+                    <label for="gender" >Giới tính</label>
+                    <select id="gender" name="gender" id="gender" value="Nam" disabled>
+                        <option value="male">Nam</option>
+                        <option value="female">Nữ</option>
+                    </select>
+                    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                <!--Quảng cáo-->
+                <label for="country">Quê quán </label>
+            </div>
+            <div class="col-70">
+                    
+                    <input type="text" name="country" id="country" value="Hà Nội" disabled>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-15">
+                    <!--Quảng cáo-->
+                    <label for="email">Địa chỉ email </label>
+                </div>
+                <div class="col-70">
+                        
+                    <input type="email" name="email" id="country" value="abcd@gmail.com" disabled>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-15">
+                <label for="phonenumber">Số diện thoại</label>
+            </div>
+            <div class="col-70">
+                <input type="number" name="phonenumber" id="phonenumber" value="098083049" disabled>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-70">
+                <button type="button" onclick="fixFunction()">Thay đổi thông tin cá nhân</button>
+            </div>
+        </div>
+    </form>
+    </div>
+    <script>
+        function fixFunction(){
+            var input = document.getElementsByTagName('input');
+            for (var i = input.length, n = 0; n < i; n++){
+                input[n].disabled = !input[n].disabled;
+            }
+        }
+    </script>
+</body>
+</html>

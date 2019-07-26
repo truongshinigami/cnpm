@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+/*decorate input*/
+input[type="submit"] {
+  padding: 5px 15px;
+  background: #ccc;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+input[type="text"] {
+  width: 25%;
+  height: 100%;
+  float: right;
+  text-align: center;
+}
+
+/*top navigation*/
+.topnav {
+  overflow: auto;
+  background-color: rgb(71, 71, 71);
+  /*Content dài dài thêm fixed*/
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: rgb(0, 0, 0);
+}
+.topnav a.active {
+  background-color: rgb(0, 148, 44);
+}
+.topnav p,
+a.button {
+  float: right;
+  text-align: right;
+  font-size: 20px;
+  margin: 0 5px;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+}
+
+.topnav a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  background-color: rgb(156, 47, 28);
+  text-decoration: none;
+  color: white;
+}
+
+.topnav button {
+  background-color: rgb(0, 0, 0);
+}
+.topnav button:hover {
+  background-color: rgb(0, 148, 44);
+}
+.footer {
+  background-color: rgb(124, 124, 124);
+  color: black;
+  padding: 2px 5px;
+}
+/*khung ngoài*/
+.content {
+  background-color: white;
+}
+/*box fill test*/
+.answer_box {
+  background-color: white;
+  font-size: 17px;
+  color: black;
+  width: 400px;
+  float: right;
+  clear: both;
+}
+/*bảng nhập đáp án*/
+table,
+td {
+  border: 1px solid black;
+  text-align: center;
+  float: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  height: 25px;
+  padding: 0px;
+}
+/*clear các dòng*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*dòng kẻ ngang*/
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+/*box nhập đáp án đúng*/
+.trueanswer {
+  background-color: white;
+  font-size: 17px;
+  color: black;
+  width: 400px;
+  box-sizing: border-box;
+}
+
+.col-15 {
+  width: 15%;
+  margin-top: 10px;
+  font-size: 16px;
+  float: left;
+}
+.col-70 {
+  width: 70%;
+  margin-top: 10px;
+  float: left;
+}
+.content p {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 0px;
+}

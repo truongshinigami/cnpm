@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*top navigation*/
+.topnav {
+  overflow: auto;
+  background-color: rgb(71, 71, 71);
+  /*Content dài dài thêm fixed*/
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: rgb(0, 0, 0);
+}
+.topnav a.active {
+  background-color: rgb(0, 148, 44);
+}
+.topnav p,
+a.button {
+  float: right;
+  text-align: right;
+  font-size: 20px;
+  margin: 0 5px;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+}
+
+button {
+  float: right;
+
+  font-size: 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: rgb(71, 71, 71);
+
+  padding: 10px 15px;
+  color: white;
+}
+#thongtin input[type="submit"] {
+  float: right;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font-size: 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: rgb(71, 71, 71);
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white;
+}
+
+.topnav a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  background-color: rgb(156, 47, 28);
+  text-decoration: none;
+  color: white;
+}
+.topnav button {
+  background-color: rgb(0, 0, 0);
+}
+.topnav button:hover {
+  background-color: rgb(0, 148, 44);
+}
+.footer {
+  background-color: rgb(124, 124, 124);
+  color: black;
+  padding: 2px 5px;
+}
+/*khung ngoài*/
+.content {
+  background-color: white;
+  padding-left: 10%;
+}
+/*clear các dòng*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*dòng kẻ ngang*/
+label {
+  padding: 12px 50px 12px 0;
+  display: inline-block;
+  font-size: 20px;
+}
+.col-15 {
+  width: 15%;
+  margin-top: 10px;
+
+  float: left;
+}
+.col-70 {
+  width: 50%;
+  margin-top: 10px;
+  float: left;
+}
+#thongtin input[type="text"],
+[type="number"],
+[type="email"] {
+  border: 1px solid black;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 20px;
+  width: 75%;
+  padding: 12px;
+}
+
+#taide input[type="text"] {
+  width: 25%;
+  height: 100%;
+  float: right;
+  text-align: center;
+}
+#gioitinh input[type="text"] {
+  border: 1px solid black;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 20px;
+  width: 15%;
+  padding: 12px;
+}
+input[type="date"] {
+  width: 30%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+.imagebox {
+  border: 1px solid black;
+  width: 200px;
+  height: 300px;
+}
+#taide table,
+#taide td {
+  border: 1px solid black;
+  text-align: center;
+  float: center;
+}
+#taide table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#taide td {
+  height: 25px;
+  padding: 0px;
+}
+
+.trueanswer {
+  background-color: white;
+  font-size: 17px;
+  color: black;
+  width: 400px;
+  box-sizing: border-box;
+}

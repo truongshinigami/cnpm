@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="#">Trang chủ</a>
+      <a href="thongtincanhan.html">Thông tin</a>
+      <a href="lambaithi.html" class="active">Làm bài </a>
+      <a href="#">Bảng xếp hạng</a>
+      <button>Đăng xuất</button>
+      <p>Xin chào : Người Chơi 1</p>
+    </div>
+
+    <div class="content" id="lambai">
+      <!--Đồng hồ đếm ngược-->
+
+      <div>
+        <p id="demo" Style="text-align: center;">Time</p>
+      </div>
+    </div>
+
+    <script>
+      // 10 minutes from now
+      var time_in_minutes = 1;
+      var current_time = Date.parse(new Date());
+      var deadline = new Date(current_time + time_in_minutes * 60 * 1000);
+
+      function time_remaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+          total: t,
+          days: days,
+          hours: hours,
+          minutes: minutes,
+          seconds: seconds
+        };
+      }
+      function run_clock(id, endtime) {
+        function update_clock() {
+          var t = time_remaining(endtime);
+          document.getElementById(id).innerHTML =
+            t.hours +
+            " hours : " +
+            t.minutes +
+            " minutes : " +
+            t.seconds +
+            " seconds left!";
+          if (t.total <= 0) {
+            clearInterval(timeinterval);
+            document.getElementById("demo").innerHTML = "Hết Giờ!!";
+          }
+        }
+        update_clock(); // run function once at first to avoid delay
+        var timeinterval = setInterval(update_clock, 1000);
+      }
+      run_clock("demo", deadline);
+    </script>
+  </body>
+</html>
